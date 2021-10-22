@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1em;
+  font-family: inherit;
+}
+html {
+  padding: 0 1rem;
+}
+body {
+  font-family: sans-serif;
+  padding: 0;
+}
+main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 10vh auto auto 10vh 10vh;
+  grid-gap: 10px;
+  grid-template-areas:
+    "navbar"
+    "sign-in-form"
+    "welcome"
+    "market-sites"
+    "footer";
+}
+@media screen and (max-width: 800px) {
+  main {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
