@@ -7,17 +7,19 @@
   font-family: inherit;
 }
 html {
-  padding: 0 1rem;
+  padding: 0;
 }
 body {
   font-family: "Playfair Display", sans-serif;
   padding: 0;
+  background-color: rgba(223, 211, 218, 0.1);
 }
 main {
   display: grid;
+  height: 100vh;
+  padding: 0;
   grid-template-columns: 50%;
-  grid-template-rows: 10vh auto auto 10vh 10vh;
-  grid-gap: 10px;
+  grid-template-rows: 10vh auto 10vh 10vh;
   grid-template-areas:
     "nav       nav"
     "welcome-message      sign-in-form"
@@ -27,6 +29,7 @@ main {
 
 .welcome-message {
   grid-area: welcome-message;
+  margin: auto;
 }
 .welcome-message h1 {
   color: #e00083;
@@ -37,7 +40,9 @@ nav {
   color: white;
   font-family: "Lato", serif !important;
 }
-
+nav h3 {
+  margin: 10px;
+}
 .market-sites {
   grid-area: market-sites;
   text-align: center;
@@ -52,10 +57,14 @@ footer {
   background-color: #333;
   color: white;
 }
+nav,
+footer {
+  padding: 0;
+}
 .sign-in-form {
   color: #333;
   grid-area: sign-in-form;
-  margin: auto 30%;
+  margin: auto 15%;
   text-align: center;
 }
 
@@ -77,12 +86,20 @@ footer {
 
 li {
   display: inline;
+  text-align: center;
 }
 @media screen and (max-width: 800px) {
   main {
     display: block;
     max-width: 1000px;
     margin: 0 auto;
+  }
+  html {
     padding: 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
