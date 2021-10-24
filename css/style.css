@@ -21,7 +21,7 @@ main {
   grid-template-areas:
     "nav       nav"
     "welcome-message      sign-in-form"
-    "market-sites sign-in-form"
+    "market-sites market-sites"
     "footer       footer";
 }
 
@@ -45,7 +45,7 @@ footer {
 .sign-in-form {
   color: #333;
   grid-area: sign-in-form;
-  margin: 0 30%;
+  margin: auto 30%;
   text-align: center;
 }
 
