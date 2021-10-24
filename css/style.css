@@ -7,16 +7,17 @@
   font-family: inherit;
 }
 html {
-  padding: 0 1rem;
+  padding: 0;
 }
 body {
   font-family: "Playfair Display", sans-serif;
   padding: 0;
+  background-color: rgba(223, 211, 218, 0.1);
 }
 main {
   display: grid;
-  height: 98vh;
-  padding: 0 1rem;
+  height: 100vh;
+  padding: 0;
   grid-template-columns: 50%;
   grid-template-rows: 10vh auto 10vh 10vh;
   grid-template-areas:
@@ -39,7 +40,9 @@ nav {
   color: white;
   font-family: "Lato", serif !important;
 }
-
+nav h3 {
+  margin: 10px;
+}
 .market-sites {
   grid-area: market-sites;
   text-align: center;
@@ -54,10 +57,14 @@ footer {
   background-color: #333;
   color: white;
 }
+nav,
+footer {
+  padding: 0;
+}
 .sign-in-form {
   color: #333;
   grid-area: sign-in-form;
-  margin: auto 30%;
+  margin: auto 15%;
   text-align: center;
 }
 
@@ -86,7 +93,6 @@ li {
     display: block;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0;
   }
   html {
     padding: 0;
