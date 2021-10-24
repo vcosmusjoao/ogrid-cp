@@ -13,14 +13,31 @@ body {
 }
 main {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 50%;
   grid-template-rows: 10vh auto auto 10vh 10vh;
   grid-gap: 10px;
   grid-template-areas:
-    "navbar       navbar"
-    "welcome      sign-in-form"
+    "nav       nav"
+    "welcome-message      sign-in-form"
     "market-sites sign-in-form"
     "footer       footer";
+}
+
+.welcome-message {
+  grid-area: welcome-message;
+}
+
+nav {
+  grid-area: nav;
+  background-color: #333;
+  color: white;
+}
+
+.market-sites {
+  grid-area: market-sites;
+}
+footer {
+  grid-area: footer;
 }
 .sign-in-form {
   color: #333;
