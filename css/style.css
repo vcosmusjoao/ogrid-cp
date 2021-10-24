@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 * {
   margin: 0;
   padding: 1rem;
@@ -31,6 +33,7 @@ nav {
   grid-area: nav;
   background-color: #333;
   color: white;
+  font-family: "Lato", serif !important;
 }
 
 .market-sites {
@@ -55,6 +58,14 @@ footer {
   outline: none;
   border: none;
   border-radius: 30px;
+}
+
+.sign-in-form button:hover {
+  background-color: rgba(224, 0, 131, 0.5);
+}
+
+li {
+  display: inline;
 }
 @media screen and (max-width: 800px) {
   main {
