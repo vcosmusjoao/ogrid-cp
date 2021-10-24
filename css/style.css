@@ -15,9 +15,10 @@ body {
 }
 main {
   display: grid;
+  height: 98vh;
+  padding: 0 1rem;
   grid-template-columns: 50%;
-  grid-template-rows: 10vh auto auto 10vh 10vh;
-  grid-gap: 10px;
+  grid-template-rows: 10vh auto 10vh 10vh;
   grid-template-areas:
     "nav       nav"
     "welcome-message      sign-in-form"
@@ -27,6 +28,7 @@ main {
 
 .welcome-message {
   grid-area: welcome-message;
+  margin: auto;
 }
 .welcome-message h1 {
   color: #e00083;
@@ -77,6 +79,7 @@ footer {
 
 li {
   display: inline;
+  text-align: center;
 }
 @media screen and (max-width: 800px) {
   main {
@@ -84,5 +87,13 @@ li {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0;
+  }
+  html {
+    padding: 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 }
