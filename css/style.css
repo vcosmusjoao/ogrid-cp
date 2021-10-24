@@ -17,21 +17,11 @@ main {
   grid-template-rows: 10vh auto auto 10vh 10vh;
   grid-gap: 10px;
   grid-template-areas:
-    "navbar"
-    "sign-in-form"
-    "welcome"
-    "market-sites"
-    "footer";
+    "navbar       navbar"
+    "welcome      sign-in-form"
+    "market-sites sign-in-form"
+    "footer       footer";
 }
-@media screen and (max-width: 800px) {
-  main {
-    display: block;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0;
-  }
-}
-
 .sign-in-form {
   color: #333;
   grid-area: sign-in-form;
@@ -48,4 +38,12 @@ main {
   outline: none;
   border: none;
   border-radius: 30px;
+}
+@media screen and (max-width: 800px) {
+  main {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
