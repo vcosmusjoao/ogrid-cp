@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 * {
   margin: 0;
   padding: 1rem;
@@ -13,29 +15,47 @@ body {
 }
 main {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-columns: 50%;
   grid-template-rows: 10vh auto auto 10vh 10vh;
   grid-gap: 10px;
   grid-template-areas:
-    "navbar"
-    "sign-in-form"
-    "welcome"
-    "market-sites"
-    "footer";
-}
-@media screen and (max-width: 800px) {
-  main {
-    display: block;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0;
-  }
+    "nav       nav"
+    "welcome-message      sign-in-form"
+    "market-sites market-sites"
+    "footer       footer";
 }
 
+.welcome-message {
+  grid-area: welcome-message;
+}
+.welcome-message h1 {
+  color: #e00083;
+}
+nav {
+  grid-area: nav;
+  background-color: #333;
+  color: white;
+  font-family: "Lato", serif !important;
+}
+
+.market-sites {
+  grid-area: market-sites;
+  text-align: center;
+  background-color: #e00083;
+  color: white;
+}
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  color: white;
+}
 .sign-in-form {
   color: #333;
   grid-area: sign-in-form;
-  margin: 0 30%;
+  margin: auto 30%;
   text-align: center;
 }
 
@@ -48,4 +68,21 @@ main {
   outline: none;
   border: none;
   border-radius: 30px;
+}
+
+.sign-in-form button:hover,
+.market-sites:hover {
+  background-color: rgba(224, 0, 131, 0.5);
+}
+
+li {
+  display: inline;
+}
+@media screen and (max-width: 800px) {
+  main {
+    display: block;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
