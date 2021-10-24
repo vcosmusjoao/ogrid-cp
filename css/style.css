@@ -38,6 +38,9 @@ nav {
 
 .market-sites {
   grid-area: market-sites;
+  text-align: center;
+  background-color: #e00083;
+  color: white;
 }
 footer {
   grid-area: footer;
@@ -60,7 +63,8 @@ footer {
   border-radius: 30px;
 }
 
-.sign-in-form button:hover {
+.sign-in-form button:hover,
+.market-sites:hover {
   background-color: rgba(224, 0, 131, 0.5);
 }
 
